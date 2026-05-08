@@ -28,10 +28,6 @@ class App:
     def cycle(self, input):
         self.resolve_input_direction(input)
         self.snake.snake_move(self.direction, self.food)
-        #current_list = self.snake.get_snake_pos()
-        #print(current_list)
-        #current_food = self.food.get_food_pos()
-        #print(current_food)
         current_snake = self.snake.get_snake_pos()
         self.screen.refresh(self.get_food_coords(), current_snake)
         self.check_collission(current_snake)
